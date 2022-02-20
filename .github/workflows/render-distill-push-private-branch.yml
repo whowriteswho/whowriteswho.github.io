@@ -106,7 +106,7 @@ jobs:
           force: true
 
   release:
-    needs: build
+#    needs: build
     name: Deploy to GitHub Branches
     runs-on: ubuntu-latest
 #     env:
