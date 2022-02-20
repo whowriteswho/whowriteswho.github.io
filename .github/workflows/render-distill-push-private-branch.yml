@@ -59,13 +59,13 @@ jobs:
 
       - name: Render Site
         run: |
-          Rscript -e 'lastmodifiedtext <- paste0("This repository was updated on: ", Sys.time());write(x = lastmodifiedtext, file = "./lastupdate.html")'
-          Rscript -e 'rmarkdown::render_site(encoding = "UTF-8")'
+#           Rscript -e 'lastmodifiedtext <- paste0("This repository was updated on: ", Sys.time());write(x = lastmodifiedtext, file = "./lastupdate.html")'
+#           Rscript -e 'rmarkdown::render_site(encoding = "UTF-8")'
       - name: Update files in docs to push private branch
         run: |          
-          Rscript -e 'fs::file_delete("docs/404.html")'
-          Rscript -e 'fs::file_copy("404.md", "docs/404.md")'
-          Rscript -e 'fs::dir_delete("docs/R")'
+#           Rscript -e 'fs::file_delete("docs/404.html")'
+#           Rscript -e 'fs::file_copy("404.md", "docs/404.md")'
+#           Rscript -e 'fs::dir_delete("docs/R")'
 #       - name: Update files in prepelectron and docselectron to push electron branch
 #         run: |
 #           Rscript -e 'fs::file_copy(".github/workflows/buildelectron.yml", "prepelectron/.github/workflows/buildelectron.yml", overwrite = TRUE)'
